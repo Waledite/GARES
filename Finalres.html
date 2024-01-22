@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Finalres.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+<!-- NAV will go here -->
+
+<header class="header">
+ <!-- <a href="#"> <img src="hope.png" alt="logo" class="logo"> </a> -->
+     <a href="#" class="logo">G.A.R.C.H.</a>
+     <i class='bx bx-menu' id="menu-icon"></i>
+	 
+	 <nav class="navbar">
+		<a href="#servicebox"> Services </a> 
+		<!-- <a href="#"> Gallery </a>  -->
+		<a href="#contact-us"> Contact </a> 
+
+		<!-- <a href="#" class="log"> Sign In </a> -->
+	 </nav>
+
+
+<div class="nav-bg"></div>
+   
+<script>
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
+const navbg = document.querySelector('.nav-bg');
+menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+    navbg.classList.toggle('active');
+});
+</script>   
+
+</header>
+
+<!-- NAV will end here -->
+
+
+<!-- Slide will go here -->
+
+<div class="slider-container">
+
+
+
+
+
+  <div class="slide fade">
+    <!-- <img class="slide-image" src="https://images.unsplash.com/photo-1682685796063-d2604827f7b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"> -->
+		<img class="slide-image" src="https://i.ibb.co/DWw1msg/HS1.jpg" alt="HS1">   
+
+	<div class="slide-content">
+      <h3 class="slide-title">Welcome to All</h3>
+      <p class="slide-desc">
+        We empower adults with development disabilities to acheive their potential based on personal choice and interest!
+      </p>
+      <a href="#servicebox" class="slide-btn">
+        Begin <ion-icon name="arrow-forward-circle" ></ion-icon>
+      </a>
+    </div>
+    <div class="slide-number-container">
+      <p class="slider-number">01</p>
+      <hr>
+      <p class="slider-number">03</p>
+    </div>
+  </div>
+
+
+
+  <div class="slide fade">
+    <!-- <img class="slide-image" src="https://images.unsplash.com/photo-1682687220566-5599dbbebf11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1075&q=80"> -->
+  <img class="slide-image" src="https://i.ibb.co/TKTWBgF/HS2.jpg" alt="pic1">
+   <div class="slide-content">
+      <h3 class="slide-title">Ask About Our Other Locations</h3>
+      <p class="slide-desc">
+        We Have Other Locations! Let's See If We Have One Closer To You!
+      </p>
+      <a href="#contact-us" class="slide-btn">
+        Locations <ion-icon name="arrow-forward-circle"></ion-icon>
+      </a>
+    </div>
+    <div class="slide-number-container">
+      <p class="slider-number">02</p>
+      <hr>
+      <p class="slider-number">03</p>
+    </div>
+  </div>
+
+
+
+  <div class="slide fade">
+    <!-- <img class="slide-image" src="https://images.unsplash.com/photo-1682685797828-d3b2561deef4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"> -->
+   <img class="slide-image" src="https://i.ibb.co/vJcbKPX/old3.jpg" >
+	<div class="slide-content">
+      <h3 class="slide-title">Warm and Hospitible Care</h3>
+      <p class="slide-desc">
+        Loved Ones Can Rest Easy When You Are In Our Care. Let's Get You Connected!
+      </p>
+      <a href="#contact-us" class="slide-btn">
+        Connect <ion-icon name="arrow-forward-circle"></ion-icon>
+      </a>
+    </div>
+    <div class="slide-number-container">
+      <p class="slider-number">03</p>
+      <hr>
+      <p class="slider-number">03</p>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Next and previous buttons -->
+  <div class="slider-nav">
+    <a class="slider-nav-btn" onclick="plusSlides(-1)">
+      <ion-icon name="caret-back-outline"></ion-icon>
+    </a>
+    <a class="slider-nav-btn" onclick="plusSlides(1)">
+      <ion-icon name="caret-forward-outline"></ion-icon>
+    </a>
+  </div>
+
+  <!-- The dots/circles -->
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+const slides = document.getElementsByClassName("slide");
+const dots = document.getElementsByClassName("dot");
+
+// Function to show a specific slide
+function showSlides(n) {
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  // Hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  // Remove the "active" class from all dots
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  // Display the current slide and mark its corresponding dot as active
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+
+// Function to advance to the next slide
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Function to navigate to a specific slide
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+// Automatically advance to the next slide every 3 seconds (3000 milliseconds)
+setInterval(function () {
+  plusSlides(1);
+}, 10000);
+
+// Initialize the slider
+showSlides(slideIndex);
+
+</script>
+
+<!-- Slide will end here -->
+
+
+
+<!-- BODY will go here -->
+
+<div class="icon-box-container">
+  <div class="icon-box">
+  <i class='bx bxs-heart'></i>
+    <h3>Caregivers You Can Trust</h3>
+    <p>Feel better in the comfort of your own home. 
+	We specialize in care and daily living assistance to an array of individuals. 
+	Whether you need daily or weekly assistance due to aging, illness, recovery,
+	or rehabilitation, our care givers will provide an individualized service 
+	that you can trust.</p>
+  </div>
+
+  <div class="icon-box">
+   <i class='bx bx-health' ></i>
+    <h3>Experienced and Supportive</h3>
+    <p>We understand that not one care plan fits all.
+	Daily services can include anything from meal preparation, hygiene, 
+	cleaning, and supervision. We will take the time to get to know you and 
+	develop an individualized care plan that fits your specific needs. </p>
+  </div>
+
+  <div class="icon-box">
+ <i class='bx bxs-heart'></i>
+    <h3>Experienced Home Health Aids</h3>
+    <p>Companionship is key to a trusted relationship with our caregivers.
+	We not only strive to help you with everyday tasks but want to develop a 
+	caring relationship with you. We provide one-on-one attention and care that 
+	cannot compare in other settings. </p>
+  </div>
+</div>
+
+
+
+
+
+<section class="servicebox" id="servicebox">
+
+<div class="services">
+
+<div class="inform">
+      <h2>Services We Offer</h2>
+	 <p>We offer a variety of services! 
+	<br> Lets see if we have just the right one for you! </p>
+	<!-- <img src="divider.png" alt="Divider" 
+	class="lazyloaded" data-ll-status="loaded"> -->
+	<img src="https://i.ibb.co/Pt1Yzhc/divider.webp" alt="divider">
+	</div>
+	
+</div>
+
+
+
+
+<div class="offer">
+
+	<div class="image-wrapper">
+	<img src="https://i.ibb.co/XtnWsYJ/pic1.webp" alt="pic1" border="0">   
+   
+   <div class="text-wrapper">
+	
+	<h3>Post-Surgical Assistance</h3>
+      <p>Recovering from home after surgery can limit <br>you with your daily
+		activities. Whether you are recovering from <br>major surgery, childbirth,
+		or plastic surgery, our compassionate caregivers<br> can assist you to 
+		a healthy and complete recovery.</p>
+    </div>
+  </div>
+  
+  <br>
+  
+   <div class="image-wrapper">
+   <img src="https://i.ibb.co/4WZ28TC/pic2.webp" alt="pic2" border="0">
+   
+   <div class="text-wrapper">
+      <h3>Physical Disability Support</h3>
+      <p>Arthritis, physical disabilities, and age-related <br>conditions 
+	  are some of the few circumstances that<br> prevent patients from caring
+	  for themselves.<br> Our caregivers can assist you with daily tasks such<br> 
+	  as mobility, eating, exercising, and grooming.</p>
+    </div>
+  </div>
+  
+  <br>
+    
+  <div class="image-wrapper">
+ <img src="https://i.ibb.co/JBfvY8J/pic3.webp" alt="pic3" border="0">
+ 
+ <div class="text-wrapper">
+      <h3>Care for Dementia Patients</h3>
+      <p>Our experienced and highly trained caregivers provide the<br> highest 
+	  quality of care to both patients <br>and their families. Our goal is to help
+	  individuals<br> and their loved ones live happy and fulfilling lives.</p>
+    </div>
+  </div>
+  
+  <br>
+  
+</div>
+
+
+
+</section>
+
+
+
+
+<section class="contact-us"  id="contact-us">
+
+
+ <div class="contact-us-form">
+ 
+  
+ 
+    <div class="contact-form">
+	
+	
+	<div class="info">
+      <h2>Contact Us</h2>
+	  <h3>Elite Care for The Ones you Love</h3>
+	 <img src="https://i.ibb.co/Pt1Yzhc/divider.webp" alt="divider" border="0">
+	<p>One of the most crucial things you can do while 
+	getting the right care for your loved ones is to be 
+	aware of your options. Please contact us to get 
+	information about their potential care today!</p>
+	</div>
+	
+	
+	
+      <form action="submit.php" method="POST">
+        <label for="fname">First Name <span class="required-field"></span> :</label>
+		<input type="text" name="fname" placeholder="First Name" required>
+		
+		<label for="lname">Last Name <span class="required-field"></span>:</label>
+	   <input type="text" name="lname" placeholder="Last Name" required>
+        
+		<label for="phone">Phone Number <span class="required-field"></span>:</label>
+		<input type="tel" name="phone" placeholder="Phone" required>
+        
+		<label for="email">Email <span class="required-field"></span>:</label>
+		<input type="email" name="email" placeholder="Email" required>
+        
+		<label for="address">Address:</label>
+		<input type="address" name="address" placeholder="Address" >
+		
+        <label for="gender">Gender <span class="required-field"></span>:</label>
+        <select name="gender" id="gender" required>
+          <option value="">Select gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        
+        <label for="interested-in">Interested In <span class="required-field"></span>:</label>
+       <br>
+		<input type="checkbox" name="interested[]" value="Product 1">Assisted Living <br>
+        <input type="checkbox" name="interested[]" value="Product 2">Home Care	<br>
+		<input type="checkbox" name="interested[]" value="Product 3">Post-Surgical Assistance	<br>
+		<input type="checkbox" name="interested[]" value="Product 4">Physical Disability Support<br>
+		<input type="checkbox" name="interested[]" value="Product 5">Care for Dementia Patient	<br>
+        <input type="checkbox" name="interested[]" value="Product 6">Adult Day Program 
+
+		<br><br>
+		
+		 <label for="comments">Comments/Questions :</label>
+        <textarea name="comments" placeholder="Please Type A Message for Clearer Inquiry..."></textarea>
+        
+        <input type="submit" value="Submit">
+		
+      </form>
+    </div>
+
+
+<!-- seperate-->
+
+    <div class="contact-details">
+      <h2>Contact Details</h2>
+      <ul>
+        <li><i class="bx bx-map"></i>5644 Hunters Crossing Court, Lithonia, GA 30038, United States</li>
+		<li><i class="bx bx-map"></i>530 Windsor Brooks lane, Lawrence, GA 30045, United States</li>
+		<li><i class="bx bx-map"></i>7066 North shore drive, Lithonia, GA 30058, United States</li>
+        <li><i class="bx bx-phone"></i>+1(678)860-7332</li>
+        <!-- <li><i class="bx bx-envelope"></i>example@example.com</li> -->
+      </ul>
+    </div>
+ 
+
+
+
+ </div>
+
+
+<?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+	$address = $_POST['address'];
+    $gender = $_POST['gender'];
+    $interested = implode(", ", $_POST['interested']);
+    $comments = $_POST['comments'];
+    
+    $to = 'starether@yahoo.com';
+    $subject = 'Contact Form Submission';
+    $message = "First Name: ".$fname."\n".
+               "Last Name: ".$lname."\n".
+               "Phone: ".$phone."\n".
+               "Email: ".$email."\n".
+			   "Address: ".$address."\n".
+               "Gender: ".$gender."\n".
+               "Interested In: ".$interested."\n".
+               "Comments: ".$comments;
+    $headers = 'From: '.$email;
+
+    if (mail($to, $subject, $message, $headers)) {
+      echo "Message sent successfully!";
+    } else {
+      echo "Failed to send message. Please try again.";
+    }
+  }
+?>
+
+
+
+</section>
+
+
+
+<!-- BODY will end here -->
+
+<!-- Footer -->
+<footer>
+  <div class="containerf">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="logo.png" alt="Logo">
+		
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-info">
+      <p> © 2023 GEORGIA RESIDENTIAL AND COMMUNITY HEALTHCARE. All rights reserved.</p>
+      <p>Designed and developed by Aaello</p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
