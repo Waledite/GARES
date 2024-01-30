@@ -318,8 +318,11 @@ showSlides(slideIndex);
 	</div>
 	
 	
+
 	
-      <form action="submit.php" method="POST">
+      <form action="https://formsubmit.co/starether@yahoo.com" method="POST" />
+
+
         <label for="fname">First Name <span class="required-field"></span> :</label>
 		<input type="text" name="fname" placeholder="First Name" required>
 		
@@ -359,6 +362,9 @@ showSlides(slideIndex);
         <input type="submit" value="Submit">
 		
       </form>
+	  
+	  
+	  
     </div>
 
 
@@ -373,6 +379,8 @@ showSlides(slideIndex);
         <li><i class="bx bx-phone"></i>+1(678)860-7332</li>
         <!-- <li><i class="bx bx-envelope"></i>example@example.com</li> -->
       </ul>
+	  
+	  
     </div>
  
 
@@ -381,36 +389,7 @@ showSlides(slideIndex);
  </div>
 
 
-<?php
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-	$address = $_POST['address'];
-    $gender = $_POST['gender'];
-    $interested = implode(", ", $_POST['interested']);
-    $comments = $_POST['comments'];
-    
-    $to = 'starether@yahoo.com';
-    $subject = 'Contact Form Submission';
-    $message = "First Name: ".$fname."\n".
-               "Last Name: ".$lname."\n".
-               "Phone: ".$phone."\n".
-               "Email: ".$email."\n".
-			   "Address: ".$address."\n".
-               "Gender: ".$gender."\n".
-               "Interested In: ".$interested."\n".
-               "Comments: ".$comments;
-    $headers = 'From: '.$email;
 
-    if (mail($to, $subject, $message, $headers)) {
-      echo "Message sent successfully!";
-    } else {
-      echo "Failed to send message. Please try again.";
-    }
-  }
-?>
 
 
 
