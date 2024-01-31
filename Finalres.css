@@ -44,9 +44,10 @@ body{
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid rgba(255, 255, 255, .2);
-	/* overflow-x:hidden; */
+	border-left: 15px solid white;
+	border-right: 15px solid #9a5d5d00;
 }
-.header::before {
+/* .header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -58,7 +59,7 @@ body{
 }
 .header:hover::before {
     left: 100%;
-}
+} */
 .logo {
     color: #fff;
     font-size: 25px;
@@ -66,7 +67,10 @@ body{
     font-weight: 600;
     cursor: default;
 }
-
+.logo:hover {
+    color: rgba(137, 42, 6,0.9);
+	transition:0.3s
+}
 
 /* .logo{
 	float:left;
@@ -88,7 +92,8 @@ a.log{
     transition: .3s;
 }
 .navbar a:hover {
-    color: #f00;
+      color: rgba(137, 42, 6,0.9);
+	transition:0.3s
 }
 
 #menu-icon {
