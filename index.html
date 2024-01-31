@@ -14,7 +14,7 @@
 
 <header class="header">
  <!-- <a href="#"> <img src="hope.png" alt="logo" class="logo"> </a> -->
-     <a href="#" class="logo">G.A.R.C.H.</a>
+     <a href="index.html" class="logo">G.A.R.C.H.</a>
      <i class='bx bx-menu' id="menu-icon"></i>
 	 
 	 <nav class="navbar">
@@ -59,10 +59,10 @@ menuIcon.addEventListener('click', () => {
 	<div class="slide-content">
       <h3 class="slide-title">Welcome to All</h3>
       <p class="slide-desc">
-        We empower adults with development disabilities to acheive their potential based on personal choice and interest!
+        We Empower Adults With Development Disabilities To Acheive Their Potential Based On Personal Choice And Interest!
       </p>
       <a href="#servicebox" class="slide-btn">
-        Begin <ion-icon name="arrow-forward-circle" ></ion-icon>
+        Details <i class='bx bx-down-arrow bx-flashing' ></i>
       </a>
     </div>
     <div class="slide-number-container">
@@ -83,7 +83,7 @@ menuIcon.addEventListener('click', () => {
         We Have Other Locations! Let's See If We Have One Closer To You!
       </p>
       <a href="#contact-us" class="slide-btn">
-        Locations <ion-icon name="arrow-forward-circle"></ion-icon>
+        Locations <i class='bx bx-down-arrow bx-flashing' ></i>
       </a>
     </div>
     <div class="slide-number-container">
@@ -104,7 +104,7 @@ menuIcon.addEventListener('click', () => {
         Loved Ones Can Rest Easy When You Are In Our Care. Let's Get You Connected!
       </p>
       <a href="#contact-us" class="slide-btn">
-        Connect <ion-icon name="arrow-forward-circle"></ion-icon>
+        Connect <i class='bx bx-down-arrow bx-flashing' ></i>
       </a>
     </div>
     <div class="slide-number-container">
@@ -191,6 +191,9 @@ showSlides(slideIndex);
 
 
 <!-- BODY will go here -->
+
+<div class="white-line">
+
 
 <div class="icon-box-container">
   <div class="icon-box">
@@ -324,22 +327,22 @@ showSlides(slideIndex);
 
 
         <label for="fname">First Name <span class="required-field"></span> :</label>
-		<input type="text" name="fname" placeholder="First Name" required>
+		<input type="text" name="First Name" placeholder="First Name" required>
 		
 		<label for="lname">Last Name <span class="required-field"></span>:</label>
-	   <input type="text" name="lname" placeholder="Last Name" required>
+	   <input type="text" name="Last Name" placeholder="Last Name" required>
         
 		<label for="phone">Phone Number <span class="required-field"></span>:</label>
-		<input type="tel" name="phone" placeholder="Phone" required>
+		<input type="tel" name="Phone" placeholder="Phone" required>
         
 		<label for="email">Email <span class="required-field"></span>:</label>
-		<input type="email" name="email" placeholder="Email" required>
+		<input type="email" name="Email" placeholder="Email" required>
         
 		<label for="address">Address:</label>
-		<input type="address" name="address" placeholder="Address" >
+		<input type="address" name="Address" placeholder="Address" >
 		
         <label for="gender">Gender <span class="required-field"></span>:</label>
-        <select name="gender" id="gender" required>
+        <select name="Gender" id="Gender" required>
           <option value="">Select gender</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
@@ -347,17 +350,17 @@ showSlides(slideIndex);
         
         <label for="interested-in">Interested In <span class="required-field"></span>:</label>
        <br>
-		<input type="checkbox" name="interested[]" value="Product 1">Assisted Living <br>
-        <input type="checkbox" name="interested[]" value="Product 2">Home Care	<br>
-		<input type="checkbox" name="interested[]" value="Product 3">Post-Surgical Assistance	<br>
-		<input type="checkbox" name="interested[]" value="Product 4">Physical Disability Support<br>
-		<input type="checkbox" name="interested[]" value="Product 5">Care for Dementia Patient	<br>
-        <input type="checkbox" name="interested[]" value="Product 6">Adult Day Program 
+		<input type="checkbox" name="interested" value="Assisted Living">Assisted Living <br>
+        <input type="checkbox" name="interested" value="Home Care">Home Care	<br>
+		<input type="checkbox" name="interested" value="Post-Surgical Assistance">Post-Surgical Assistance	<br>
+		<input type="checkbox" name="interested" value="Physical Disability Support">Physical Disability Support<br>
+		<input type="checkbox" name="interested" value="Care for Dementia Patient">Care for Dementia Patient	<br>
+        <input type="checkbox" name="interested" value="Adult Day Program">Adult Day Program 
 
 		<br><br>
 		
 		 <label for="comments">Comments/Questions :</label>
-        <textarea name="comments" placeholder="Please Type A Message for Clearer Inquiry..."></textarea>
+        <textarea name="Comments" placeholder="Please Type A Message for Clearer Inquiry..."></textarea>
         
         <input type="submit" value="Submit">
 		
@@ -373,10 +376,10 @@ showSlides(slideIndex);
     <div class="contact-details">
       <h2>Contact Details</h2>
       <ul>
-        <li><i class="bx bx-map"></i>5644 Hunters Crossing Court, Lithonia, GA 30038, United States</li>
-		<li><i class="bx bx-map"></i>530 Windsor Brooks lane, Lawrence, GA 30045, United States</li>
-		<li><i class="bx bx-map"></i>7066 North shore drive, Lithonia, GA 30058, United States</li>
-        <li><i class="bx bx-phone"></i>+1(678)860-7332</li>
+       <a href="https://shorturl.at/fiO56"> <li><i class="bx bx-map"></i>5644 Hunters Crossing Court, Lithonia, GA 30038, United States</li></a>
+		 <a href="https://shorturl.at/wzIY6"><li><i class="bx bx-map"></i>530 Windsor Brooks lane, Lawrence, GA 30045, United States</li></a>
+		 <a href="https://shorturl.at/oTUX6"><li><i class="bx bx-map"></i>7066 North shore drive, Lithonia, GA 30058, United States</li></a>
+       <li><i class="bx bx-phone"></i>+1(678)860-7332</li>
         <!-- <li><i class="bx bx-envelope"></i>example@example.com</li> -->
       </ul>
 	  
@@ -404,7 +407,7 @@ showSlides(slideIndex);
   <div class="containerf">
     <div class="footer-content">
       <div class="footer-logo">
-        <img src="logo.png" alt="Logo">
+        <img src="logo.png" alt="GRCH">
 		
       </div>
       <div class="footer-links">
@@ -423,6 +426,8 @@ showSlides(slideIndex);
   </div>
 </footer>
 
+
+</div>
 
 </body>
 </html>
